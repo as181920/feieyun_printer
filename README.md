@@ -1,28 +1,23 @@
 # FeieyunPrinter
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/feieyun_printer`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+飞鹅云小票机对接gem
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'feieyun_printer'
+gem 'feieyun_printer', git: "git@github.com:as181920/feieyun_printer.git", branch: "master"
 ```
-
-And then execute:
-
-    $ bundle install
-
-Or install it yourself as:
-
-    $ gem install feieyun_printer
 
 ## Usage
 
-TODO: Write usage instructions here
+```ruby
+ApiClient.new(user, ukey).then do |ac|
+  ac.add_printer(sn_list)
+  ac.print(sn, content, {times: 1})
+end
+```
 
 ## Development
 
