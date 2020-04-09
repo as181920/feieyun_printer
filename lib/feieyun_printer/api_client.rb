@@ -48,7 +48,7 @@ module FeieyunPrinter
         data[:sig] = sign(data)
       end
       resp = call_api(request_params)
-      FeieyunPrinter.logger.info "FeieyunPrinter print #{sn} #{content} #{options.to_json} resp(#{resp.status}): #{resp.body}"
+      FeieyunPrinter.logger.info "FeieyunPrinter print #{sn} #{content.squish} #{options.to_json} resp(#{resp.status}): #{resp.body}"
       JSON.load(resp.body)
     end
 
