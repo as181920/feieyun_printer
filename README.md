@@ -13,6 +13,7 @@ gem 'feieyun_printer', git: "git@github.com:as181920/feieyun_printer.git", branc
 ## Usage
 
 ```ruby
+#snlist = "sn1#key1#remark1#carnum1\nsn2#key2#remark2#carnum2"
 ApiClient.new(user, ukey).then do |ac|
   ac.add_printer(sn_list)
   ac.print(sn, content, {times: 1})
